@@ -6,6 +6,7 @@ import Home from "./views/Home";
 import About from "./views/About";
 import Contact from "./views/Contact";
 import SignIn from "./views/SignIn";
+import ErrorScreen from './views/ErrorScreen';
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
     <Route path='/about' element={<About/>}/>
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/signIn' element={<SignIn/>}/>
+    <Route path='*' element={<ErrorScreen/>}/>
     </Routes>
       
     </BrowserRouter>
