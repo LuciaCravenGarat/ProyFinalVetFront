@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Lucia",
+      "lastName": "Sanchez",
+      "email": "lucia@gmail.com",
+      "phone": "3652568956"
+    }
+  ],
+
+  "pets": [
+    {
+      "name": "Pepo",
+      "specie": "can",
+      "raza": "indefinida"
+    }
+  ],
+
+  "turnos": [
+    {
+        "detail": "moquillo",
+        "vet": "Juan",
+        "pet": "Pepo",
+        "date": "25/8",
+        "time": "15:30"
+    }
+  ]
+}

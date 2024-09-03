@@ -1,5 +1,6 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {getPets} from "./utils/index"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import  NavbarApp  from "./common/NavbarApp";
 import Home from "./views/Home";
@@ -10,6 +11,7 @@ import ErrorScreen from './views/ErrorScreen';
 
 function App() {
   
+getPets().then(data=>console.log(data))
 
   return (
     <BrowserRouter>
