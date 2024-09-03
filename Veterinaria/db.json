@@ -22,14 +22,17 @@
       "raza": "indefinida"
     }
   ],
-  "turnos": [
+  "shifts": [
     {
-      "detail": "moquillo",
-      "vet": "Juan",
-      "pet": "Pepo",
-      "date": "25/8",
-      "time": "15:30",
-      "id": "8eed"
+      "id": "41ff"
+    },
+    {
+      "id": "c656",
+      "detail": "peluqueria",
+      "vet": "Antonia",
+      "pet": "Luna",
+      "date": "15/8",
+      "time": "16:30"
     }
   ]
 }

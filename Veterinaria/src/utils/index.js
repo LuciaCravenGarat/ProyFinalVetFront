@@ -1,6 +1,6 @@
 const urlUsers = "http://localhost:3000/users";
 const urlPets = "http://localhost:3000/pets";
-const urlTurnos = "http://localhost:3000/turnos";
+const urlShifts = "http://localhost:3000/shifts";
 import axios from "axios";
 
 //----------------CRUD PETS-----------
@@ -39,7 +39,6 @@ export const createPet = async (obj) => {
     return pet;
   } catch (error) {
     console.log(error);
-    
   }
 };
 
@@ -51,24 +50,71 @@ export const createPet = async (obj) => {
 // });
 
 export const deletePet = async (id) => {
-    try {
-      let pet = await axios.delete(`${urlPets}/${id}`);
-      return pet
-    } catch (error) {
-        console.log(error);
-    }
-  };
+  try {
+    let pet = await axios.delete(`${urlPets}/${id}`);
+    return pet;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-  //deletePet("3");
+//deletePet("3");
 
+//----------------CRUD SHIFTS-----------
 
+export const getShifts = async () => {
+  try {
+    let shifts = await fetch(urlShifts);
+    return shifts.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-//----------------CRUD USERS-----------
+export const updateShift = async (id, obj) => {
+  console.log(id);
+  console.log(obj);
 
-// const getUsers = async ()=> {
-//     try {
+  try {
+    let shift = await axios.put(`${urlShifts}/${id}`, obj);
+    return shift;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-//     } catch (error) {
+// updateShift("8eed",{
+//     detail: "peluqueria",
+//     vet: "Juan",
+//     pet: "Pepo",
+//     date: "25/8",
+//     time: "15:30"
+//   })
 
-//     }
-// }
+export const createShift = async (obj) => {
+  try {
+    let shift = await axios.post(`${urlShifts}`, obj);
+    return shift;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// createShift( {
+//     detail: "control",
+//     vet: "Antonia",
+//     pet: "Luna",
+//     date: "15/8",
+//     time: "16:30"
+//   });
+
+export const deleteShift = async (id) => {
+  try {
+    let shift = await axios.delete(`${urlShifts}/${id}`);
+    return shift;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+//deleteShift("e185");
