@@ -22,6 +22,9 @@ const NavbarApp = () => {
             <LinkContainer to="/signIn">
               <Nav.Link>Sign In</Nav.Link>
             </LinkContainer>
+            <LinkContainer to="/login">
+              <Nav.Link>Log in</Nav.Link>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Container>
