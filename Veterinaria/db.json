@@ -1,29 +1,35 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Lucia",
       "lastName": "Sanchez",
       "email": "lucia@gmail.com",
       "phone": "3652568956"
     }
   ],
-
   "pets": [
     {
+      "id": "1",
       "name": "Pepo",
+      "specie": "can",
+      "raza": "indefinida"
+    },
+    {
+      "id": "2",
+      "name": "loli",
       "specie": "can",
       "raza": "indefinida"
     }
   ],
-
   "turnos": [
     {
-        "detail": "moquillo",
-        "vet": "Juan",
-        "pet": "Pepo",
-        "date": "25/8",
-        "time": "15:30"
+      "detail": "moquillo",
+      "vet": "Juan",
+      "pet": "Pepo",
+      "date": "25/8",
+      "time": "15:30",
+      "id": "8eed"
     }
   ]
 }
