@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PetCard from '../components/PetCard';
-import { set } from 'react-hook-form';
+//import { set } from 'react-hook-form';
 
 
 const Pets = ({pets}) => {

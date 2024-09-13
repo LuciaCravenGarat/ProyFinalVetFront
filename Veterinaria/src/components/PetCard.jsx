@@ -10,11 +10,11 @@ const PetCard = ({ pet }) => {
         <Card.Text>`Especie: {pet.specie}`</Card.Text>
         <Card.Text>`Raza: {pet.raza}`</Card.Text>
 
-        <NavLink to={`admin/fichaMascota/${pet.id}`}>
+        <NavLink to={`/admin/petDetail/${pet.id}`}>
           <Button variant="primary">Ver ficha</Button>
         </NavLink>
 
-        <NavLink to={`admin/editarMascota/${pet.id}`}>
+        <NavLink to={`/admin/editarMascota/${pet.id}`}>
           <Button variant="success"> Editar</Button>
         </NavLink>
 

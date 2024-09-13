@@ -62,6 +62,14 @@ const AddPet = ({uploadData}) => {
         <Form.Text>{errors.url?.message}</Form.Text>
       </FormGroup>
       <FormGroup>
+        <Form.Label>Detalle</Form.Label>
+        <FormControl
+          type="text"
+          {...register("detail", { required: "Este campo es obligatorio" })}
+        />
+        <Form.Text>{errors.detail?.message}</Form.Text>
+      </FormGroup>
+      <FormGroup>
         <Button type="submit">Agregar mascota</Button>
       </FormGroup>
     </Form>

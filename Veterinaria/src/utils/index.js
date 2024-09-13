@@ -14,6 +14,15 @@ export const readPets = async () => {
   }
 };
 
+export const readOnePet = async (id) => {
+  try {
+    let pet = await axios.get(`${urlPets}/${id}`);
+    return pet;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export const updatePet = async (id, obj) => {
   console.log(id);
   console.log(obj);

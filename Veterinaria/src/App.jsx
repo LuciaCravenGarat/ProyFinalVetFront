@@ -11,6 +11,7 @@ import Login from "./views/Login";
 import ManagePets from "./views/ManagePets";
 import Pets from "./views/Pets";
 import ErrorScreen from "./views/ErrorScreen";
+import PetDetail from "./views/PetDetail";
 
 function App() {
   const uploadPets = async () => {
@@ -33,7 +34,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/admin/pets" element={<Pets pets={uploadPets}/>} />
         <Route path="/admin/managePets" element={<ManagePets />} />
-        <Route path="*" element={<ErrorScreen />} />
+        <Route path="/admin/petDetail/:id" element={<PetDetail />} />
+        {/* <Route path="*" element={<ErrorScreen />} /> */}
       </Routes>
     </BrowserRouter>
   );
