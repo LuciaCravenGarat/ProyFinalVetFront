@@ -20,6 +20,56 @@
       "name": "loli",
       "specie": "can",
       "raza": "indefinida"
+    },
+    {
+      "id": "340d"
+    },
+    {
+      "id": "ba66"
+    },
+    {
+      "id": "9c52"
+    },
+    {
+      "id": "a93f"
+    },
+    {
+      "id": "ccd0"
+    },
+    {
+      "id": "fc68"
+    },
+    {
+      "id": "138e",
+      "name": "Pulgas",
+      "specie": "felina",
+      "raza": "random"
+    },
+    {
+      "id": "eb06",
+      "name": "Lola",
+      "specie": "canina",
+      "raza": "Terrier"
+    },
+    {
+      "id": "ff66",
+      "name": "Juana",
+      "specie": "canina",
+      "raza": "terrier"
+    },
+    {
+      "id": "26ba",
+      "name": "Lila",
+      "specie": "ave",
+      "raza": "loro",
+      "url": "https://www.adiosmascota.es/wp-content/uploads/2022/05/Alimentacion_correcta_de_un_loro.jpg"
+    },
+    {
+      "id": "039f",
+      "name": "Gruñón",
+      "specie": "felina",
+      "raza": "random",
+      "url": "https://static.nationalgeographic.es/files/styles/image_3200/public/75552.ngsversion.1422285553360.jpg?w=1900&h=1267"
     }
   ],
   "shifts": [

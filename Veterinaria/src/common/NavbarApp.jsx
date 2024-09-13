@@ -25,6 +25,9 @@ const NavbarApp = () => {
             <LinkContainer to="/login">
               <Nav.Link>Log in</Nav.Link>
             </LinkContainer>
+            <LinkContainer to="/admin/managePets">
+              <Nav.Link>Gestionar mascotas</Nav.Link>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Container>

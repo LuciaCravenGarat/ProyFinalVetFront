@@ -26,12 +26,6 @@ export const updatePet = async (id, obj) => {
   }
 };
 
-// updatePet(2, {
-//   id: 2,
-//   name: "loli",
-//   specie: "can",
-//   raza: "indefinida",
-// });
 
 export const createPet = async (obj) => {
   try {
@@ -42,12 +36,6 @@ export const createPet = async (obj) => {
   }
 };
 
-// createPet({
-//   id: 3,
-//   name: "Micha",
-//   specie: "can",
-//   raza: "caniche",
-// });
 
 export const deletePet = async (id) => {
   try {
@@ -58,7 +46,7 @@ export const deletePet = async (id) => {
   }
 };
 
-//deletePet("3");
+
 
 //----------------CRUD SHIFTS-----------
 
