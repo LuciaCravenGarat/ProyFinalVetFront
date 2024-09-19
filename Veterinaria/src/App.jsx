@@ -1,6 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { readPets, readShifts } from "./utils/index";
+import { readPets, readShifts, updatePet } from "./utils/index";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavbarApp from "./common/NavbarApp";
 import Home from "./views/Home";
@@ -12,6 +12,8 @@ import ManagePets from "./views/ManagePets";
 import Pets from "./views/Pets";
 import ErrorScreen from "./views/ErrorScreen";
 import PetDetail from "./views/PetDetail";
+import UpdatePet from "./views/UpdatePet";
+
 
 function App() {
   const uploadPets = async () => {
@@ -35,6 +37,7 @@ function App() {
         <Route path="/admin/pets" element={<Pets pets={uploadPets}/>} />
         <Route path="/admin/managePets" element={<ManagePets />} />
         <Route path="/admin/petDetail/:id" element={<PetDetail />} />
+        <Route path="/admin/updatePet/:id" element={<UpdatePet/>} />
         {/* <Route path="*" element={<ErrorScreen />} /> */}
       </Routes>
     </BrowserRouter>

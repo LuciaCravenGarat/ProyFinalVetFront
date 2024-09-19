@@ -6,21 +6,65 @@ import {
   FormGroup,
   FormSelect,
 } from "react-bootstrap";
+import { useParams } from "react-router-dom";
+import { readOnePet } from "../utils";
+import { useEffect } from "react";
 
-const AddPet = ({uploadData}) => {
+
+const AddPet = ({ uploadData, updateData, isEdit = false }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors}, reset 
+    formState: { errors },
+    reset,
+    setValue,
   } = useForm();
+
+  const { id } = useParams();
 
   const addItem = (obj) => {
     console.log(obj);
     uploadData(obj);
     reset();
   };
+  const editItem = (obj) => {
+    console.log(obj);
+    updateData(obj);
+    reset();
+  };
+
+  useEffect(() => {
+    if (isEdit && id) {
+      const getPet = async (id) => {
+        try {
+          let obj = await readOnePet(id);
+          let { data } = obj;
+          if (data) {
+            setValue("name", data.name);
+            setValue("specie", data.specie);
+            setValue("raza", data.raza);
+            setValue("url", data.url);
+            setValue("detail", data.detail);
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+      getPet(id);
+    }
+  }, [id, isEdit, setValue]);
+
+  const onSubmit = (obj) => {
+    if (isEdit) {
+      editItem(obj);
+    } else {
+      addItem(obj);
+    }
+  };
+
   return (
-    <Form onSubmit={handleSubmit(addItem)} method="POST">
+    <Form onSubmit={handleSubmit(onSubmit)} method="POST">
       <FormGroup>
         <Form.Label>Nombre</Form.Label>
         <FormControl

@@ -14,7 +14,7 @@ const PetCard = ({ pet }) => {
           <Button variant="primary">Ver ficha</Button>
         </NavLink>
 
-        <NavLink to={`/admin/editarMascota/${pet.id}`}>
+        <NavLink to={`/admin/updatePet/${pet.id}`}>
           <Button variant="success"> Editar</Button>
         </NavLink>
 

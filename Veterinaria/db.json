@@ -32,6 +32,38 @@
       "raza": "Golden",
       "url": "https://www.purina.es/sites/default/files/styles/ttt_image_510/public/2024-02/sitesdefaultfilesstylessquare_medium_440x440public2022-09golden20retriever.jpg?itok=48StbVfe",
       "detail": "5 años"
+    },
+    {
+      "id": "bd44",
+      "name": "Mumi",
+      "specie": "ave",
+      "raza": "cacatua",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Cacatua_galerita_2_-_Austin%27s_Ferry.jpg/800px-Cacatua_galerita_2_-_Austin%27s_Ferry.jpg",
+      "detail": "10 años"
+    },
+    {
+      "name": "Felipe",
+      "specie": "tortuga",
+      "raza": "hhh",
+      "url": "https://static.wikia.nocookie.net/wikia_tortuga/images/9/99/Tortuga-rusa.jpg/revision/latest/scale-to-width-down/800?cb=20200526211233&path-prefix=es",
+      "detail": "tortuga",
+      "id": "0843"
+    },
+    {
+      "name": "Gregorio",
+      "specie": "canina",
+      "raza": "Random",
+      "url": "https://akindi.es/wp-content/uploads/2023/09/1694381311499-671x900.jpg",
+      "detail": "cachorro",
+      "id": "97c4"
+    },
+    {
+      "name": "Bonny Bonny",
+      "specie": "conejo",
+      "raza": "random",
+      "url": "https://static.maskokotas.com/blog/wp-content/uploads/2020/12/hare-4375952_1920-1.jpg",
+      "detail": "adulto. Marrón, manchas blancas",
+      "id": "1e73"
     }
   ],
   "shifts": [
