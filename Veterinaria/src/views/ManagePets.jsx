@@ -19,9 +19,8 @@ const ManagePets = () => {
     <div>
       <AddPet uploadData={uploadData} />
       <br />
-
       <Link to={`/admin/pets`}>
-        <Button>Ver mascotas</Button>
+        <Button>Ir a mascotas</Button>
       </Link>
     </div>
   );

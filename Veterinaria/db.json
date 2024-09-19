@@ -26,12 +26,12 @@
       "detail": "detalle ficha"
     },
     {
-      "id": "0afc",
-      "name": "Lucho",
+      "name": "Coqui",
       "specie": "canina",
       "raza": "Golden",
       "url": "https://www.purina.es/sites/default/files/styles/ttt_image_510/public/2024-02/sitesdefaultfilesstylessquare_medium_440x440public2022-09golden20retriever.jpg?itok=48StbVfe",
-      "detail": "5 años"
+      "detail": "5 años",
+      "id": "0afc"
     },
     {
       "id": "bd44",

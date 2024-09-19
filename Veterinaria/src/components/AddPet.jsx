@@ -114,7 +114,7 @@ const AddPet = ({ uploadData, updateData, isEdit = false }) => {
         <Form.Text>{errors.detail?.message}</Form.Text>
       </FormGroup>
       <FormGroup>
-        <Button type="submit">Agregar mascota</Button>
+        <Button type="submit">Enviar</Button>
       </FormGroup>
     </Form>
   );
