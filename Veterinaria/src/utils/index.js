@@ -38,10 +38,11 @@ export const updatePet = async (id, obj) => {
 
 export const createPet = async (obj) => {
   try {
-    let pet = await axios.post(`${urlPets}`, obj);
-    return pet;
+    await axios.post(`${urlPets}`, obj);
+    return true;
   } catch (error) {
     console.log(error);
+    false
   }
 };
 
@@ -80,13 +81,7 @@ export const updateShift = async (id, obj) => {
   }
 };
 
-// updateShift("8eed",{
-//     detail: "peluqueria",
-//     vet: "Juan",
-//     pet: "Pepo",
-//     date: "25/8",
-//     time: "15:30"
-//   })
+
 
 export const createShift = async (obj) => {
   try {
@@ -97,13 +92,7 @@ export const createShift = async (obj) => {
   }
 };
 
-// createShift( {
-//     detail: "control",
-//     vet: "Antonia",
-//     pet: "Luna",
-//     date: "15/8",
-//     time: "16:30"
-//   });
+
 
 export const deleteShift = async (id) => {
   try {
@@ -114,4 +103,4 @@ export const deleteShift = async (id) => {
   }
 };
 
-//deleteShift("e185");
+//-------------------CRUD users--------------

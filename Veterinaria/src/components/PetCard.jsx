@@ -1,7 +1,51 @@
 import { Button, Card } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
+import { deletePet } from "../utils";
+import Swal from "sweetalert2";
+
+
 
 const PetCard = ({ pet }) => {
+  const { id } = useParams();
+
+  const deleteP =  (id) => {
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: "btn btn-success",
+        cancelButton: "btn btn-danger"
+      },
+      buttonsStyling: false
+    });
+    swalWithBootstrapButtons.fire({
+      title: `¿Estás segura de que querés eliminar a ${pet.name}?`,
+      text: "Esta operación es irreversible!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Sí. eliminar!",
+      cancelButtonText: "No, cancelar!",
+      reverseButtons: true
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        await deletePet(id);
+        swalWithBootstrapButtons.fire({
+          title: "Eliminada!",
+          text: `La mascota ${pet.name} ha sido eliminada con éxito.`,
+          icon: "success"
+        });
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire({
+          title: "Operación cancelada",
+          text: "La mascota está a salvo",
+          icon: "error"
+        });
+      }
+    });
+    
+  };
+
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Img variant="top" src={pet.url} />
@@ -19,7 +63,9 @@ const PetCard = ({ pet }) => {
         </NavLink>
 
         <NavLink>
-          <Button variant="danger">Eliminar</Button>
+          <Button variant="danger" onClick={() => deleteP(pet.id)}>
+            Eliminar
+          </Button>
         </NavLink>
       </Card.Body>
     </Card>

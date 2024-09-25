@@ -9,7 +9,7 @@ import {
 import { useParams } from "react-router-dom";
 import { readOnePet } from "../utils";
 import { useEffect } from "react";
-
+import Swal from "sweetalert2";
 
 const AddPet = ({ uploadData, updateData, isEdit = false }) => {
   const {
@@ -22,15 +22,65 @@ const AddPet = ({ uploadData, updateData, isEdit = false }) => {
 
   const { id } = useParams();
 
-  const addItem = (obj) => {
-    console.log(obj);
-    uploadData(obj);
-    reset();
+  const addItem = async (obj) => {
+    try {
+      let response = await uploadData(obj);
+      console.log(response);
+
+      if (response) {
+        Swal.fire({
+          title: "Mascota agregada!",
+          text: `La mascota ${obj.name} ha sido agregada con éxito`,
+          icon: "success",
+        });
+
+        reset();
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Algo salió mal",
+          text: "Por favor, intenta nuevamente más tarde",
+          footer: '<a href="#">Why do I have this issue?</a>',
+        });
+      }
+    } catch (error) {
+      console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Ha ocurrido un error inesperado. Inténtalo de nuevo.",
+      });
+    }
   };
-  const editItem = (obj) => {
-    console.log(obj);
-    updateData(obj);
-    reset();
+
+  const editItem = async (obj) => {
+    try {
+      console.log(obj);
+      let response = await updateData(obj);
+      if (response) {
+        Swal.fire({
+          title: "Mascota modificada!",
+          text: `La mascota ${obj.name} ha sido modificada con éxito`,
+          icon: "success",
+        });
+        reset();
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Algo salión mal.",
+          text: "Por favor, intenta nuevamente más tarde",
+        });
+      }
+      
+    } catch (error) {
+      console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Ha ocurrido un error inesperado. Inténtalo de nuevo.",
+      });
+      
+    }
   };
 
   useEffect(() => {
