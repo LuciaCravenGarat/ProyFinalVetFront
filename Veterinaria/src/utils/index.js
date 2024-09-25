@@ -26,13 +26,6 @@ export const updatePet = async (id, obj) => {
   }
 };
 
-// updatePet(2, {
-//   id: 2,
-//   name: "loli",
-//   specie: "can",
-//   raza: "indefinida",
-// });
-
 export const createPet = async (obj) => {
   try {
     let pet = await axios.post(`${urlPets}`, obj);
@@ -42,13 +35,6 @@ export const createPet = async (obj) => {
   }
 };
 
-// createPet({
-//   id: 3,
-//   name: "Micha",
-//   specie: "can",
-//   raza: "caniche",
-// });
-
 export const deletePet = async (id) => {
   try {
     let pet = await axios.delete(`${urlPets}/${id}`);
@@ -57,8 +43,6 @@ export const deletePet = async (id) => {
     console.log(error);
   }
 };
-
-//deletePet("3");
 
 //----------------CRUD SHIFTS-----------
 
@@ -83,14 +67,6 @@ export const updateShift = async (id, obj) => {
   }
 };
 
-// updateShift("8eed",{
-//     detail: "peluqueria",
-//     vet: "Juan",
-//     pet: "Pepo",
-//     date: "25/8",
-//     time: "15:30"
-//   })
-
 export const createShift = async (obj) => {
   try {
     let shift = await axios.post(`${urlShifts}`, obj);
@@ -99,14 +75,6 @@ export const createShift = async (obj) => {
     console.log(error);
   }
 };
-
-// createShift( {
-//     detail: "control",
-//     vet: "Antonia",
-//     pet: "Luna",
-//     date: "15/8",
-//     time: "16:30"
-//   });
 
 export const deleteShift = async (id) => {
   try {
@@ -117,4 +85,24 @@ export const deleteShift = async (id) => {
   }
 };
 
-//deleteShift("e185");
+//--------------CRUD users--------------
+
+export const validateUser = async (email) => {
+  try {
+    let users = await axios.get(urlUsers);
+    let { data } = users;
+    let result = data.find(user => user.email == email);
+    return result;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const createUser = async (obj) => {
+  try {
+    let newUser = await axios.post(urlUsers, obj);
+    return newUser;
+  } catch (error) {
+    console.log(error);
+  }
+};
