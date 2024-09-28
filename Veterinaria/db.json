@@ -30,16 +30,44 @@
   ],
   "pets": [
     {
-      "id": "1",
-      "name": "Pepo",
-      "specie": "can",
-      "raza": "indefinida"
+      "name": "Horco",
+      "specie": "felina",
+      "raza": "random",
+      "url": "https://static.nationalgeographic.es/files/styles/image_3200/public/75552.ngsversion.1422285553360.jpg?w=1900&h=1267",
+      "detail": "detalle ficha",
+      "id": "039f"
     },
     {
-      "id": "2",
-      "name": "loli",
-      "specie": "can",
-      "raza": "indefinida"
+      "name": "Gregorio",
+      "specie": "canina",
+      "raza": "Random",
+      "url": "https://akindi.es/wp-content/uploads/2023/09/1694381311499-671x900.jpg",
+      "detail": "cachorro",
+      "id": "97c4"
+    },
+    {
+      "name": "Bonny Bom",
+      "specie": "conejo",
+      "raza": "random",
+      "url": "https://static.maskokotas.com/blog/wp-content/uploads/2020/12/hare-4375952_1920-1.jpg",
+      "detail": "adulto. Marrón, manchas blancas",
+      "id": "1e73"
+    },
+    {
+      "name": "Lunera",
+      "specie": "felina",
+      "raza": "papa",
+      "url": "https://vitalcan.es/wp-content/uploads/kitty-2903812_1280.jpg",
+      "detail": "ojos diferentes colores. Albina",
+      "id": "8b05"
+    },
+    {
+      "id": "14d4",
+      "name": "Chipi",
+      "specie": "conejo",
+      "raza": "Golden",
+      "url": "https://verdecora.es/blog/wp-content/uploads/2021/04/como-es-conejo.jpg",
+      "detail": "Minitura"
     }
   ],
   "shifts": [

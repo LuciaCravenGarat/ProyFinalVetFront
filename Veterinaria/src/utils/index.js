@@ -14,6 +14,15 @@ export const readPets = async () => {
   }
 };
 
+export const readOnePet = async (id) => {
+  try {
+    let pet = await axios.get(`${urlPets}/${id}`);
+    return pet;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export const updatePet = async (id, obj) => {
   console.log(id);
   console.log(obj);
@@ -26,15 +35,24 @@ export const updatePet = async (id, obj) => {
   }
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> delete-pet
 export const createPet = async (obj) => {
   try {
-    let pet = await axios.post(`${urlPets}`, obj);
-    return pet;
+    await axios.post(`${urlPets}`, obj);
+    return true;
   } catch (error) {
     console.log(error);
+    false
   }
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> delete-pet
 export const deletePet = async (id) => {
   try {
     let pet = await axios.delete(`${urlPets}/${id}`);
@@ -44,6 +62,11 @@ export const deletePet = async (id) => {
   }
 };
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> delete-pet
 //----------------CRUD SHIFTS-----------
 
 export const readShifts = async () => {
@@ -67,6 +90,11 @@ export const updateShift = async (id, obj) => {
   }
 };
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> delete-pet
 export const createShift = async (obj) => {
   try {
     let shift = await axios.post(`${urlShifts}`, obj);
@@ -76,6 +104,11 @@ export const createShift = async (obj) => {
   }
 };
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> delete-pet
 export const deleteShift = async (id) => {
   try {
     let shift = await axios.delete(`${urlShifts}/${id}`);
@@ -85,6 +118,7 @@ export const deleteShift = async (id) => {
   }
 };
 
+<<<<<<< HEAD
 //--------------CRUD users--------------
 
 export const validateUser = async (email) => {
@@ -110,3 +144,6 @@ export const createUser = async (obj) => {
 export const userLogin = async() => {
 
 }
+=======
+//-------------------CRUD users--------------
+>>>>>>> delete-pet
