@@ -5,7 +5,7 @@ import axios from "axios";
 
 //----------------CRUD PETS-----------
 
-export const getPets = async () => {
+export const readPets = async () => {
   try {
     let pets = await fetch(urlPets);
     return pets.json();
@@ -46,7 +46,7 @@ export const deletePet = async (id) => {
 
 //----------------CRUD SHIFTS-----------
 
-export const getShifts = async () => {
+export const readShifts = async () => {
   try {
     let shifts = await fetch(urlShifts);
     return shifts.json();
