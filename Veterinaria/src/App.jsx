@@ -55,7 +55,7 @@ function App() {
         <Route path="/admin/managePets" element={<ManagePets />} />
         <Route path="/admin/petDetail/:id" element={<PetDetail />} />
         <Route path="/admin/updatePet/:id" element={<UpdatePet/>} />
-        {/* <Route path="*" element={<ErrorScreen />} /> */}
+        <Route path="*" element={<ErrorScreen />} /> 
       </Routes>
     </BrowserRouter>
     </UserContext.Provider>
