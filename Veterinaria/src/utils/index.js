@@ -106,3 +106,7 @@ export const createUser = async (obj) => {
     console.log(error);
   }
 };
+
+export const userLogin = async() => {
+
+}

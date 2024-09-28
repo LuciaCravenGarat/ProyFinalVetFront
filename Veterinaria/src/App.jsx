@@ -9,13 +9,27 @@ import Contact from "./views/Contact";
 import SignIn from "./views/SignIn";
 import Login from "./views/Login";
 import ErrorScreen from './views/ErrorScreen';
+import { UserContext } from './components/UserContext';
+import { useState } from 'react';
+
+
 
 
 function App() {
   
-
+  const [user, setUser] = useState({
+    "id": 0,
+      "name": "",
+      "lastName": "",
+      "phone": "",
+      "email": "",
+      "password": "",
+      "admin": false
+  })
 
   return (
+
+    <UserContext.Provider value={{user, setUser}}>
     <BrowserRouter>
     <NavbarApp/>
     <Routes>
@@ -28,6 +42,7 @@ function App() {
     </Routes>
       
     </BrowserRouter>
+    </UserContext.Provider>
   )
 }
 

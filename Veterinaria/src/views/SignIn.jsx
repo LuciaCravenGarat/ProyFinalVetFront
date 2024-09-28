@@ -1,9 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { hashSync } from "bcryptjs-react";
+import Swal from "sweetalert2";
+import { UserContext } from "../components/UserContext";
+
 
 export const SignIn = ({ validateUser, createUser }) => {
+
+  const {user} = useContext(UserContext);
+  console.log(user);
+  
+
   const {
     register,
     handleSubmit,
@@ -14,7 +22,24 @@ export const SignIn = ({ validateUser, createUser }) => {
   const addUser = async (obj) => {
     let existUser = await validateUser(obj.email);
     if (existUser) {
-      alert("El usuario ya existe");
+      Swal.fire({
+        icon: "error",
+        title: "El email ingresado ya está registrado",
+        text: "Por favor, intente con otra dirección de correo",
+        footer: '<a href="#">Ir a página Ingresar</a>'
+      });
+    } else {
+      let newUser = {
+        name: obj.name,
+        lastName: obj.lastName,
+        phone: obj.phone,
+        email: obj.email,
+        password: hashSync(obj.password, 12),
+        admin: false 
+      }
+      let createdUser = await createUser(newUser);
+      console.log(createdUser);
+      
     }
   };
   return (
@@ -75,6 +100,7 @@ export const SignIn = ({ validateUser, createUser }) => {
           <Form.Control
             type="password"
             placeholder="Ingresar contraseña"
+            autoComplete="false"
             {...register("password", {
               required: "La contraseña obligatoria",
             })}
@@ -83,7 +109,10 @@ export const SignIn = ({ validateUser, createUser }) => {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
+          <Form.Check type="checkbox" 
+          label="Recordar mis datos"
+          {...register("recordame")}
+          name="recordame" />
         </Form.Group>
 
         <Button variant="primary" type="submit">

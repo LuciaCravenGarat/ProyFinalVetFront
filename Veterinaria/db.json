@@ -1,43 +1,31 @@
 {
   "users": [
     {
-      "name": "Lucia",
-      "lastName": "Sanchez",
-      "phone": "3652568956",
-      "email": "lucia@gmail.com",
-      "password": "1234"
+      "id": "458b",
+      "name": "Maria",
+      "lastName": "Marte",
+      "phone": "256325689",
+      "email": "maria@gmail.com",
+      "password": "$2a$12$AsKl4F4t9FwwErzvgzZvk.CCXhLtv/1F/NOlU9iXbv4hpFLIMVz.W",
+      "admin": false
     },
     {
-      "id": "6dd7",
+      "id": "e962",
       "name": "Lucia",
-      "lastName": "Craven Garat",
-      "phone": "03585729575",
-      "email": "usuario@gmail.com",
-      "password": "123"
+      "lastName": "Díaz",
+      "phone": "256325986",
+      "email": "lucia@gmail.com",
+      "password": "$2a$12$O2.wCywax1h4y2ut0p3ZZesI4kt.0kYFN1HmT9LVLPqX8ZT97uTjy",
+      "admin": true
     },
     {
-      "id": "8b57",
-      "name": "Lucia",
-      "lastName": "Craven Garat",
-      "phone": "03585729575",
-      "email": "lucia@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "5c66",
-      "name": "Lucia",
-      "lastName": "Craven Garat",
-      "phone": "03585729575",
-      "email": "lucia@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "110f",
-      "name": "Lucia",
-      "lastName": "Craven Garat",
-      "phone": "03585729575",
-      "email": "lucia@gmail.com",
-      "password": "123"
+      "id": "3987",
+      "name": "Guadalupe",
+      "lastName": "Martinez",
+      "phone": "523659566",
+      "email": "guada@gmail.com",
+      "password": "$2a$12$40IP3dnvtxW9ywPNRTbahehTKpuY0InDMgRs21ckmWb47nZXY.h1u",
+      "admin": false
     }
   ],
   "pets": [
@@ -55,9 +43,6 @@
     }
   ],
   "shifts": [
-    {
-      "id": "41ff"
-    },
     {
       "id": "c656",
       "detail": "peluqueria",
