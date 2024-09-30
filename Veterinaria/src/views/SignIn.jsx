@@ -47,7 +47,7 @@ export const SignIn = ({ validateUser, createUser }) => {
       <div>SignIn</div>
 
       <Form onSubmit={handleSubmit(addUser)}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Nombre</Form.Label>
           <Form.Control
             type="text"
@@ -59,7 +59,7 @@ export const SignIn = ({ validateUser, createUser }) => {
           <Form.Text>{errors.name?.message}</Form.Text>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId="formBasicLastName">
           <Form.Label>Apellido/s</Form.Label>
           <Form.Control
             type="text"
@@ -71,7 +71,7 @@ export const SignIn = ({ validateUser, createUser }) => {
           <Form.Text>{errors.lastName?.message}</Form.Text>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId="formBasicPhone">
           <Form.Label>Teléfono</Form.Label>
           <Form.Control
             type="number"

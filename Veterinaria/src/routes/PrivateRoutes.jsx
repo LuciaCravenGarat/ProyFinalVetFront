@@ -6,11 +6,13 @@ import { UserContext } from "../components/UserContext";
 const PrivateRoutes = () => {
 
     const {user} = useContext(UserContext);
+    console.log(user.admin);
+    
 
     if(user.admin) {
         return <Outlet/>
     } else {
-        <Navigate to="/"/>
+        Navigate("/")
     }
 }
 

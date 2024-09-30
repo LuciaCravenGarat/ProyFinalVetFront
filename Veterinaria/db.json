@@ -26,6 +26,15 @@
       "email": "guada@gmail.com",
       "password": "$2a$12$40IP3dnvtxW9ywPNRTbahehTKpuY0InDMgRs21ckmWb47nZXY.h1u",
       "admin": false
+    },
+    {
+      "id": "ab4f",
+      "name": "Luana",
+      "lastName": "Loopez",
+      "phone": "562325688",
+      "email": "luana@gmail.com",
+      "password": "$2a$12$YT0O3BD.qKKgbXz6BGdayObCZsvu0no0sPRtDRpma2j7MUA5XxPQ2",
+      "admin": true
     }
   ],
   "pets": [
