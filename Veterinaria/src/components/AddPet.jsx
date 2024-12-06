@@ -6,7 +6,7 @@ import {
   FormGroup,
   FormSelect,
 } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { readOnePet } from "../utils";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
@@ -143,9 +143,9 @@ const AddPet = ({ uploadData, updateData, isEdit = false }) => {
         <Form.Label>Raza</Form.Label>
         <FormControl
           type="text"
-          {...register("raza", { required: "La raza es obligatoria" })}
+          {...register("race", { required: "La raza es obligatoria" })}
         />
-        <Form.Text>{errors.raza?.message}</Form.Text>
+        <Form.Text>{errors.race?.message}</Form.Text>
       </FormGroup>
       <FormGroup>
         <Form.Label>URL imagen</Form.Label>

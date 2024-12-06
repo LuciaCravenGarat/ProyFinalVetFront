@@ -1,0 +1,22 @@
+.homeTeam-container{
+    background-color: antiquewhite;
+}
+.home-team-container {
+  display: flex; /* Activa diseño en fila */
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas si no caben */
+  justify-content: space-around; /* Distribuye las tarjetas uniformemente */
+  align-items: center; /* Alinea las tarjetas verticalmente al inicio */
+  gap: 20px; /* Espaciado entre tarjetas */
+  padding: 20px; /* Espaciado interno */
+  width: 100vw; /* Asegura que el contenedor ocupe el 100% del ancho de la pantalla */
+  box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+  margin: 0 auto;
+  
+}
+
+.home-team-card {
+  flex: 1 1 calc(25% - 20px); /* Las tarjetas ocupan un 25% del ancho menos el espaciado */
+  max-width: 25%; /* Limita el ancho máximo al 25% */
+  min-width: 200px; /* Ancho mínimo para evitar tarjetas demasiado pequeñas */
+  box-sizing: border-box; /* Incluye el padding y borde en el cálculo del ancho */
+}

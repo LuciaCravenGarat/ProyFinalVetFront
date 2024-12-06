@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import { UserContext } from "../components/UserContext";
 
 
+
 export const SignIn = ({ validateUser, createUser }) => {
 
   const {user} = useContext(UserContext);
@@ -39,6 +40,13 @@ export const SignIn = ({ validateUser, createUser }) => {
       }
       let createdUser = await createUser(newUser);
       console.log(createdUser);
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Usuario creado con éxito!",
+        showConfirmButton: false,
+        timer: 1500
+      });
       
     }
   };

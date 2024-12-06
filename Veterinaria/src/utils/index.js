@@ -1,6 +1,7 @@
 const urlUsers = "http://localhost:3000/users";
 const urlPets = "http://localhost:3000/pets";
 const urlShifts = "http://localhost:3000/shifts";
+import compareSync from "bcryptjs-react";
 import axios from "axios";
 
 //----------------CRUD PETS-----------
@@ -21,7 +22,7 @@ export const readOnePet = async (id) => {
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 export const updatePet = async (id, obj) => {
   console.log(id);
@@ -41,7 +42,7 @@ export const createPet = async (obj) => {
     return true;
   } catch (error) {
     console.log(error);
-    false
+    false;
   }
 };
 
@@ -54,14 +55,21 @@ export const deletePet = async (id) => {
   }
 };
 
-
-
 //----------------CRUD SHIFTS-----------
 
 export const readShifts = async () => {
   try {
     let shifts = await fetch(urlShifts);
     return shifts.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const readOneShift = async (id) => {
+  try {
+    let shift = await axios.get(`${urlShifts}/${id}`);
+    return shift;
   } catch (error) {
     console.log(error);
   }
@@ -79,8 +87,6 @@ export const updateShift = async (id, obj) => {
   }
 };
 
-
-
 export const createShift = async (obj) => {
   try {
     let shift = await axios.post(`${urlShifts}`, obj);
@@ -89,8 +95,6 @@ export const createShift = async (obj) => {
     console.log(error);
   }
 };
-
-
 
 export const deleteShift = async (id) => {
   try {
@@ -107,7 +111,7 @@ export const validateUser = async (email) => {
   try {
     let users = await axios.get(urlUsers);
     let { data } = users;
-    let result = data.find(user => user.email == email);
+    let result = data.find((user) => user.email == email);
     return result;
   } catch (error) {
     console.log(error);
@@ -123,6 +127,19 @@ export const createUser = async (obj) => {
   }
 };
 
-export const userLogin = async() => {
+const readUsers = async () => {
+  try {
+    let users = await axios.get(urlUsers);
+    console.log(users);
+    return users;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-}
+export const userLogin = async (obj) => {
+  let user = await validateUser(obj.email);
+  if (user?.email && compareSync(obj.password, user.password)) {
+    return user;
+  }
+};

@@ -2,11 +2,12 @@ import { Button, Card } from "react-bootstrap";
 import { NavLink, useParams } from "react-router-dom";
 import { deletePet } from "../utils";
 import Swal from "sweetalert2";
-
-
+import { UserContext } from "./UserContext";
+import { useContext } from "react";
 
 const PetCard = ({ pet }) => {
   const { id } = useParams();
+  const { user, setUser } = useContext(UserContext);
 
   const deleteP =  (id) => {
     const swalWithBootstrapButtons = Swal.mixin({
@@ -53,8 +54,8 @@ const PetCard = ({ pet }) => {
         <Card.Title>`Nombre: {pet.name}`</Card.Title>
         <Card.Text>`Especie: {pet.specie}`</Card.Text>
         <Card.Text>`Raza: {pet.raza}`</Card.Text>
-
-        <NavLink to={`/admin/petDetail/${pet.id}`}>
+        
+          <NavLink to={`/admin/petDetail/${pet.id}`}>
           <Button variant="primary">Ver ficha</Button>
         </NavLink>
 
@@ -67,6 +68,8 @@ const PetCard = ({ pet }) => {
             Eliminar
           </Button>
         </NavLink>
+        
+       
       </Card.Body>
     </Card>
   );

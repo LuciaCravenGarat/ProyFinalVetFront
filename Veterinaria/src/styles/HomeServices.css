@@ -1,0 +1,21 @@
+.home-services-container {
+    display: flex;              /* Activa el diseño en fila */
+    justify-content: space-between; /* Espacia los divs de forma uniforme */
+    align-items: center;        /* Alinea verticalmente al centro */
+    gap: 20px;                  /* Espaciado opcional entre los divs */
+    margin: 20px;               /* Espaciado externo */
+  }
+  
+  .home-services-text {
+    flex: 1;                    /* Permite que este div ocupe más espacio si es necesario */
+    padding: 10px;
+    max-width: 40%;             /* Limita el ancho del texto */
+  }
+  
+  .home-services-cards {
+    display: flex;              /* Activa flexbox para las tarjetas */
+    flex-wrap: wrap;            /* Permite que las tarjetas se ajusten en filas */
+    gap: 20px;                  /* Espaciado entre las tarjetas */
+    flex: 2;                    /* Permite que las tarjetas ocupen más espacio */
+    justify-content: space-around; /* Centra las tarjetas en el espacio disponible */
+  }

@@ -35,6 +35,24 @@
       "email": "luana@gmail.com",
       "password": "$2a$12$YT0O3BD.qKKgbXz6BGdayObCZsvu0no0sPRtDRpma2j7MUA5XxPQ2",
       "admin": true
+    },
+    {
+      "id": "6291",
+      "name": "Juana",
+      "lastName": "Bianchi",
+      "phone": "526352654",
+      "email": "juana@gmail.com",
+      "password": "$2a$12$4jykqXP6NWnI1Q0/1x3JCOLoyzkpOp97FcZ/QqFNoS.tTUm5S6Gp6",
+      "admin": false
+    },
+    {
+      "id": "b9f7",
+      "name": "José",
+      "lastName": "Lopez",
+      "phone": "562356984",
+      "email": "jose@gmail.com",
+      "password": "$2a$12$zEEEdbXgOdOom12CBYVRO.rgudzNWe5KG5FjdvCbszwzYHbVmoeFO",
+      "admin": false
     }
   ],
   "pets": [
@@ -77,13 +95,36 @@
       "raza": "Golden",
       "url": "https://verdecora.es/blog/wp-content/uploads/2021/04/como-es-conejo.jpg",
       "detail": "Minitura"
+    },
+    {
+      "id": "a650",
+      "name": "Luci",
+      "specie": "canina",
+      "raza": "cruza",
+      "url": "https://live.staticflickr.com/5131/5532639924_f494f920b2_z.jpg",
+      "detail": "obesidad"
+    },
+    {
+      "id": "6470",
+      "name": "Lula",
+      "specie": "canina",
+      "raza": "Bolldog",
+      "url": "https://www.zooplus.es/magazine/wp-content/uploads/2019/06/franz%C3%B6sische-bulldogge.jpg",
+      "detail": "5 años"
+    },
+    {
+      "id": "eb51",
+      "name": "Lucia",
+      "specie": "canina",
+      "race": "gggggggggg",
+      "url": "https://static.maskokotas.com/blog/wp-content/uploads/2020/12/hare-4375952_1920-1.jpg",
+      "detail": "ojos diferentes colores. Albina"
     }
   ],
   "shifts": [
     {
       "id": "c656",
-      "detail": "peluqueria",
-      "vet": "Antonia",
+      "title": "peluqueria",
       "pet": "Luna",
       "date": "15/8",
       "time": "16:30"

@@ -1,0 +1,22 @@
+.home-about-container {
+  width: 100vw; /* 100% del ancho del viewport */
+  margin-top: 20px; 
+  margin-bottom: 20px;
+  padding: 0;
+  display: flex; /* Activa Flexbox para organizar los hijos en fila */
+  justify-content: space-around; /* Distribuye los divs con espacio entre ellos */
+  align-items: center; /* Centra verticalmente el contenido dentro de los divs */
+  gap: 20px; /* Espaciado opcional entre los divs */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas si no hay espacio */
+  background-color: antiquewhite;
+}
+
+.home-about-container div {
+  text-align: center; /* Centra el texto e imágenes dentro de cada div */
+  width: 30%; /* Opcional: Controla el ancho de cada div */
+}
+
+.home-about-container img {
+  max-width: 100%; /* Ajusta la imagen al ancho del div */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
